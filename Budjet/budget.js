@@ -11,20 +11,69 @@ let appData =  {
     income:[],
     savings: false
 };
-let a1 = prompt('Enter your expences sort 1 name',""),
-    a2 = +prompt('Enter cost of sort 1 expences', ""),
-    a3 = prompt('Enter your expences sort 2 name',""),
-    a4 =  +prompt('Enter cost of sort 2 expences', "");
 
-appData.expenses[a1] = a2;
-appData.expenses[a3] = a4;
-console.log(appData.expenses.a1);
-console.log(appData.expenses.a2);
-console.log(appData.expenses.a3);
-console.log(appData.expenses.a4);
 
-let a7 = (((appData.mon-appData.expenses.a2-appData.expenses.a4)/30));
-alert('Your budget per Day' + appData.mon/30 );
-alert('Your budget minus Expenses per Day' + a7);
-console.log(appData.mon/30);
-console.log(a7);
+
+// for (let i = 0; i < 2; i++) {
+//     let a = prompt('Enter your expences sort 1 name',""),
+//         b = +prompt('Enter cost of sort 1 expences', "");
+//         appData.expenses[a] = b;
+
+//         if((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
+//          && a != '' && b != '' && a.length < 50 ) {
+//              console.log ("done");
+//              appData.expenses[a] = b;
+//          } else {
+//              alert('Ошибка ввода, введите данные заново!');
+//             i--;
+//          }
+// }
+
+// let i = 0;
+// while (i < 2) {
+//     let a = prompt('Enter your expences sort 1 name',""),
+//     b = +prompt('Enter cost of sort 1 expences', "");
+//     appData.expenses[a] = b;
+
+//     if((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
+//      && a != '' && b != '' && a.length < 50 ) {
+//          console.log ("done");
+//          appData.expenses[a] = b;
+//      } else {
+//          alert('Ошибка ввода, введите данные заново!');
+//         i--;
+//          }  
+//          i++;
+// }
+
+let i = 0;
+do {
+let a = prompt('Enter your expences sort 1 name',""),
+    b = +prompt('Enter cost of sort 1 expences', "");
+appData.expenses[a] = b;
+
+if((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
+ && a != '' && b != '' && a.length < 50 ) {
+     console.log ("done");
+     appData.expenses[a] = b;
+ } else {
+     alert('Ошибка ввода, введите данные заново!');
+    i--;
+}
+i++;
+} while (i < 2);
+
+appData.moneyPerDay = appData.mon/30;
+alert('Your budget per Day:' + appData.moneyPerDay );
+// alert('Your budget minus Expenses per Day' + a7);
+// console.log(appData.mon/30);
+// console.log(a7);
+if (appData.moneyPerDay < 100) {
+    console.log("Minimum level of money");
+} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+    console.log("Average level of money");
+} else if (appData.moneyPerDay > 2000) {
+    console.log("High level of money");
+} else {
+    console.log("Error !!!");
+}
