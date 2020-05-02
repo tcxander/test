@@ -65,3 +65,80 @@ let twele = "12.2";
 // console.log(Math.round(twele));
 console.log(parseInt(twele));
 console.log(parseFloat(twele));
+
+//call back functions это когда функция внутри аргументов исходной функции
+// function learnJS(lang, callback) {
+//     console.log("I am learning " + lang);
+//     callback();
+// }
+// function done() {
+//     console.log("I've past 3rd lesson");
+// }
+
+// learnJS("Javascript", done)
+
+// let options = {
+//     width: 1024,
+//     height: 1024,
+//     name: "test"
+// }
+// console.log(options.name);
+// options.bool = false;
+// options.colours = {
+//     border: "black",
+//     bg: "red"
+// }
+// delete options.bool;
+
+// // console.log(options);
+
+// for (let key in options) {
+//     console.log('Свойство ' + key + ' имеет значение ' + options[key]);
+// }
+// console.log(Object.keys(options).length);
+
+// let arr = ["first", 2, 3, "four", 5];
+// arr.forEach(function(item, i, mass) {
+//     console.log(i+1 + ': ' + item + " (массив: " + mass + ')');
+// });
+
+// console.log(arr);
+// let mass = [1, 3, 4, 6, 7];
+
+// for (let key in mass) {
+//     console.log(key);
+//  }
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+// }
+
+// let ans = prompt("",""),
+//     arr = [];
+
+// arr = ans.split(',');
+// console.log(arr);
+
+// let arr = ["awwe", 'asdd', 'pp', 'rqa'],
+// i = arr.join(', ');
+// console.log(i);
+
+let ar = [1, 15, 4],
+i = arr.sort(compareNum);
+function compareNum(a,b) {
+    return a-b;
+}
+console.log(arr);
+
+// let soldier = {
+//     health: 400,
+//     armour: 100
+// }
+
+// let john = {
+//     health: 100
+// }
+
+// john.__proto__ = soldier;
+// console.log(john);
+// console.log(john.armour);
+
