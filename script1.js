@@ -1,40 +1,108 @@
-let box = document.getElementById('box'),
-    btn = document.getElementsByTagName('button'),
-    circle = document.getElementsByClassName('circle'),
-    heart = document.querySelectorAll('.heart'),
-    oneHeart = document.querySelector('.heart'),
-    wrapper = document.querySelector('.wrapper');
 
-box.style.backgroundColor = 'blue';
-btn[1].style.borderRadius = '100%';
-circle[0].style.backgroundColor = 'red';
-circle[1].style.backgroundColor = 'yellow';
-circle[2].style.backgroundColor = 'green';
+// let btn1 = document.querySelectorAll('button'),
+//     wrap = document.querySelector('.wrapper'),
+//     link = document.querySelector('a');
+// btn[0].onclick = function () {
+//     alert('You pressed 1 st button');
+// };
 
-// for (let i = 0; i < heart.length; i++) {
-//     heart[i].style.backgroundColor = 'blue';
-// }
-
-// heart.forEach(function(item, i, hearts) {
-//   item.style.backgroundColor = 'blue';
+// btn[0].onclick = function () {
+//     alert('You pressed 1 st button AGAIN!');
+// };
+// btn1[0].addEventListener('click',  function(event){
+//    console.log(event);
+//     let target = event.target;
+//     target.style.display = 'none';
+//     console.log('Something happened: ' + event.type + 'on element' + event.target);
+    
+// });
+// wrap.addEventListener('click', function() {
+//     console.log('Something happened: ' + event.type + 'on element' + event.target);
 // });
 
-let div = document.createElement('div'),
-    text = document.createTextNode("Тут был я");
+// link.addEventListener('click', function() {
+//     event.preventDefault();
+//     console.log('Something happened: ' + event.type + 'on element' + event.target);
 
-div.classList.add('black');
-// document.body.appendChild(div);
+// })
 
-// wrapper.appendChild(div)
+// btn1.forEach(function(item) {
+//     item.addEventListener('mouseleave', function() {
+//         console.log('Mouse LEFTT!!!!');
+//     });
+// });
 
-// div.innerHTML = '<h1>Hello, World ?</h1>';
+// btn[0].addEventListener('mouseenter', function() {
+//     alert('WTF MAN DONT TOUCH');
+// });
 
-div.textContent = 'Hello WOrld!';
 
-document.body.insertBefore(div, circle[0]);
-document.body.removeChild(circle[1]);
-wrapper.removeChild(heart[1]);
+//Mobile
 
-document.body.replaceChild(btn[1], circle[1]);
+//touchstart
+// touchmove
+// touchend
+// touchenter
+//touchleave
+// touchcancel
 
-console.log(div);
+// window.addEventListener('DOMcontentLoaded', function() {
+//     let box = document.querySelector('.box');
+
+//     box.addEventListener('touchstart', function(e) {
+//         e.preventDefault();
+
+//         console.log("Red box: touchstart");
+//         console.log("e.target");
+//         console.log("e.touches[0]");
+//         console.log('e.targetTouches');
+//     });
+
+//     box.addEventListener('touchmove', function(e) {
+//         e.preventDefault();
+//         console.log("Red box: touchmove");
+//     });
+
+//     box.addEventListener('touchend', function(e) {
+//         e.preventDefault();
+//         console.log("Red box: touchend");
+//     });
+
+// });
+
+//Regural expressions
+
+// new RegExp('pattern', 'flags');
+// /pattern/
+
+// let ans = prompt('вВедите ваше имя');
+// let reg = /n/g;
+
+// console.log(reg.test(ans));
+
+// console.log(ans.match(reg));
+
+
+//console.log(ans.search(reg));
+//
+//Flags
+// i
+//g
+//m 
+
+//Все цифры:
+// \d \D
+//Все буквы
+// \w
+// \s пробел
+ 
+// let pass = prompt('Введите пароль');
+// console.log(pass.replace(/./g, "*")); 
+// console.log(pass);
+// alert('12-34-56'.replace(/-/g,":"));
+
+let str = 'My nane is/ R2D2';
+
+console.log(str.match(/\//i));
+
+ 
